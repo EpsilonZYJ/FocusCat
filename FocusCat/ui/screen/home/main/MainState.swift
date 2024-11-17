@@ -5,7 +5,7 @@ import SwiftUI
 
 class MainState{
     //专注的时间
-    var time :CatTime =  LocalSetting.initTime
+    var time :CatTime = LocalSetting.initTime
     //休息的时间
     var breakTime : CatTime = LocalSetting.breakTime
     //记录专注开始的时间
@@ -13,7 +13,7 @@ class MainState{
     //猫猫列表
     var catList : List<Cat> = emptyList()
     //专注状态
-    var focusState: FocusState = FocusState.UnFocus
+    var focusState: FocusState = FocusState<<#Value: Hashable#>>.UnFocus
     //屏幕状态，用来出错提示
     var screenState: TriState = TriState.Idle
     //标签列表
@@ -21,7 +21,7 @@ class MainState{
     //弹窗状态
     var popUpsWindowsStates: PopUpsWindowsStates = PopUpsWindowsStates()
     //是否可以上下拉动到统计界面
-    var scrollEnable : Boolean = true
+    var scrollEnable : DarwinBoolean = true
     //当前标签
     var nowLabel: Label = LocalSetting.nowLabel
     //专注开始后当前使用的猫咪
@@ -29,13 +29,13 @@ class MainState{
     //休息时间，全局变量需observer监测
     var initBreakTime : CatTime = LocalSetting.breakTime
     //初始时间，全局变量需要observer监测
-    var initTime :  CatTime =LocalSetting.initTime
+    var initTime :  CatTime = LocalSetting.initTime
     //专注模式，全局变量需要observer监测
     var focusMode: FocusMode = LocalSetting.focusMode
     //提示音许可，全局变量需要observer监测
-    var notifyPermission : Boolean = LocalSetting.notifyPermission
+    var notifyPermission : DarwinBoolean = LocalSetting.notifyPermission
     //注意力记录许可，全局变量需要observer监测
-    var openAttentionRecord : Boolean = LocalSetting.openAttentionRecord
+    var openAttentionRecord : DarwinBoolean = LocalSetting.openAttentionRecord
     //猫粮数量，全局变量需要observer监测
     var catFood : Int = AuthorUtils.catFood
     //提示音Map集合，全局变量需要observer监测
@@ -43,5 +43,5 @@ class MainState{
     //音乐播放器状态
     var musicPlayerState: MusicPlayerState = MusicPlayerState()
     //是否需要登出
-    var needLogout:Boolean = false
+    var needLogout:DarwinBoolean = false
 }

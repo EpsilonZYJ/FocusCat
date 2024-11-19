@@ -1,7 +1,6 @@
 import SwiftUI
 
-// TODO
-// 未修复
+// TODO: 未修复error
 
 class MainState{
     //专注的时间
